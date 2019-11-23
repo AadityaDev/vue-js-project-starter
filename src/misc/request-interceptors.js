@@ -1,5 +1,5 @@
 async function setAuthHeaders({ store, $http }) {
-  const accessToken = store.state.accounts.accessToken;
+  const { accessToken } = store.state.accounts;
   if (accessToken) {
     $http.defaults.headers.common.Authorization = `Bearer ${accessToken}`;
   } else {

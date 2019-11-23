@@ -37,12 +37,12 @@ const getAppVersion = () => {
 export default {
   name: 'App',
   components: {
-    DeviceView: () => {
-      // if (isMobileOnly) {
-      return import('./Mobile.vue');
-      // }
-      // return import('@/views/error.vue');
-    },
+    DeviceView: () =>
+    // if (isMobileOnly) {
+       import('./Mobile.vue')
+    // }
+    // return import('@/views/error.vue');
+    ,
   },
   data() {
     return {
@@ -113,7 +113,7 @@ export default {
       this.registration.waiting.postMessage('skipWaiting');
     },
     cordovaInit() {
-  
+
     },
   },
 };
